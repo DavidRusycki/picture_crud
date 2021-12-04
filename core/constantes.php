@@ -12,6 +12,7 @@
  // Ações do sistema.
  const ACAO_UPLOAD = 10;
  const ACAO_CONSULTA = 1;
+ const ACAO_EXCLUIR = 2;
 
  const ACOES = [
     ACAO_UPLOAD,
