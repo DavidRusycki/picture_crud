@@ -11,7 +11,7 @@ function init() : void {
 /**
  * Valida os dados da requisição para identificar o objetivo da mesma.
  */
-function validaDadosRequisicao() : void {
+function validaDadosRequisicao() : bool {
     includeConstantes();
     //Valida se a requisição possui os parametros minimos necessários. Ou seja se ela possui uma ação e uma rotina. se não tiver esses dois não tem como continuar, e portanto deve exibir um erro na tela do usuário e não um redirecionamento.
     if (isset($_GET[ACAO]) && isset($_GET[ROTINA]) && $_GET[ACAO] && $_GET[ROTINA]) {
@@ -19,7 +19,7 @@ function validaDadosRequisicao() : void {
         validaRotina();
         validaParametros();
     }
-
+    return true;
 }
 
 /**
