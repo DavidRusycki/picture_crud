@@ -9,6 +9,7 @@
  const ACAO = 'acao';
  const ROTINA = 'rotina';
  const MENU = 'menu';
+ const IMAGEM = 'imagem';
 
  // Ações do sistema.
  const ACAO_UPLOAD = 10;
