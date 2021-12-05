@@ -35,5 +35,5 @@ function getArrayConsultaImagens() : array {
  * @return String
  */
 function getSqlImagens() : string {
-    return 'select * from imagens';
+    return 'select * from imagem';
 }

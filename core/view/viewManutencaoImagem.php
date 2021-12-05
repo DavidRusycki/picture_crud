@@ -8,10 +8,14 @@
 </head>
 <body>
     
-    <form enctype="multipart/form-data" action="?acao=<?=ACAO_EXECUTA_INCLUSAO?>&rotina=imagem" method="POST" >
+    <form enctype="multipart/form-data" action="index.php?acao=<?= ACAO_EXECUTA_INCLUSAO ?>&rotina=imagem" method="POST" >
 
+        <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome">
+        <br>
         <input type="file" name="arquivo" id="arquivo">
+        <br>
+        <input type="submit" value="Enviar">
 
     </form>
 

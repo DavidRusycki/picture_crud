@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <a href="?acao=<?=ACAO_EXIBE_INCLUIR?>&rotina=imagem">Incluir</a>
+    <a href="index.php?acao=<?=ACAO_EXIBE_INCLUIR?>&rotina=imagem">Incluir</a>
 
     <?php montaConsulta() ?>
 

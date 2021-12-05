@@ -21,7 +21,7 @@ function includeControllerConsultaImagem() : void {
 }
 
 function includeControllerManutencao() : void {
-    require_once('./core/controller/controllerConsultaImagem.php');
+    require_once('./core/controller/controllerManutencao.php');
 }
 
 function includeViewConsultaImagem() : void {

@@ -33,8 +33,8 @@ function montaInclusao() : void {
 function processaInclusao() : bool {
     validaPostSetado();
     validaFilesSetado();
-    
-    move_uploaded_file($_FILES['tmp_name'], getCaminhoPadrao($_POST['nome']));
+
+    move_uploaded_file($_FILES['arquivo']['tmp_name'], getCaminhoPadrao($_POST['nome']));
     return executeBoolean(getSqlInsertImagem($_POST['nome']));
 }
 
