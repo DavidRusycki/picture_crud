@@ -15,3 +15,5 @@ function includeControllerBase() : void {
 function includeControllerBd() : void {
     require_once('./core/controller/controllerBd.php');
 }
+
+
