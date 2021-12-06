@@ -46,7 +46,7 @@ function processaInclusao() : bool {
  */
 function validaTamanhoArquivo(int $iTamanho) {
     if ($iTamanho > 3145728) {
-        throw new \exception('Apenas são permitidos arquivos menores que 3mb. TAMANHO:'.$iTamanho, 999);
+        throw new \exception('Apenas são permitidos arquivos maiores que 3mb. TAMANHO:'.$iTamanho, 999);
     }
 }
 
