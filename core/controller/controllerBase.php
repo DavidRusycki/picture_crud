@@ -102,6 +102,7 @@ function exibeIncluir($sRotina) : void {
 function executaInclusao($sRotina) : void {
     includeControllerManutencao();
     processaInclusao();
+    redirectHome();
 }
 
 /**
@@ -126,4 +127,12 @@ function executaExclusao($sRotina) : void {
         includeControllerManutencao();
         processaExclusao($_GET['codigo']);
     }
+    redirectHome();
+}
+
+/**
+ * Redireciona o usuário para o inicio.
+ */
+function redirectHome() : void {
+    header('Location: index.php');
 }

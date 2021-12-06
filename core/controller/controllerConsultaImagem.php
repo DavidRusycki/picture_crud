@@ -17,8 +17,15 @@ function iniciaConsulta() : void {
 function montaConsulta() : void {
     $aImagens = getArrayConsultaImagens();
     foreach($aImagens as $aLinha) {
-        echo "<img src=\"./img/{$aLinha['nome']}\">";
-        echo "<a class=\"btn btn-danger\" href=\"?codigo=".$aLinha['codigo']."acao=".ACAO_EXECUTA_EXCLUSAO."&rotina=".$_GET[ROTINA]."\">Deletar</a>";
+
+        echo "<div class=\"col\">
+            <div class=\"card card-cover h-400 overflow-hidden text-white bg-dark rounded-10 shadow-lg\" style=\"background-image: url('./img/{$aLinha['nome']}'); background-size: cover;\">
+                <a href=\"?codigo=".$aLinha['codigo']."&nome=".$aLinha['nome']."&acao=".ACAO_EXECUTA_EXCLUSAO."&rotina=".$_GET[ROTINA]."\" class=\"d-flex flex-column h-400 p-2 pb-4 text-white text-shadow-1\">
+                    <h2 class=\"pt-5 mt-5 mb-3 display-10 lh-5 fw-bold\">".ucfirst('Apagar')."</h2>
+                </a>
+            </div>
+        </div>";
+
         echo "<br>";
     }
 }

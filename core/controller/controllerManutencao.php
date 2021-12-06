@@ -9,6 +9,7 @@
  * @param Integer $iCodigo
  */
 function processaExclusao(int $iCodigo) : bool {
+    unlink(getCaminhoPadrao($_GET['nome']));
     return executeBoolean(getSqlDeleteImagem($iCodigo));
 }
 
@@ -34,8 +35,19 @@ function processaInclusao() : bool {
     validaPostSetado();
     validaFilesSetado();
 
+    validaTamanhoArquivo($_FILES['arquivo']['size']);
+
     move_uploaded_file($_FILES['arquivo']['tmp_name'], getCaminhoPadrao($_POST['nome']));
     return executeBoolean(getSqlInsertImagem($_POST['nome']));
+}
+
+/**
+ * Valida o tamanho do arquivo.
+ */
+function validaTamanhoArquivo(int $iTamanho) {
+    if ($iTamanho > 3145728) {
+        throw new \exception('Apenas são permitidos arquivos menores que 3mb. TAMANHO:'.$iTamanho, 999);
+    }
 }
 
 /**
